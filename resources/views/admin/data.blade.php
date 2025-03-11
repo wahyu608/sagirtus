@@ -37,8 +37,8 @@
                             </div>
                             <div class="flex w-full justify-between gap-4 mb-4">
                                 <!-- Filter Desa -->
-                                <div>
-                                <select x-model="selectedDesa" @change="filterData()" class="px-2 py-1 border rounded-md text-sm text-black">
+                                <div class=" md:flex md:gap-4">
+                                <select x-model="selectedDesa" @change="filterData()" class="px-2 py-1 border w-5/12 rounded-md text-xs md:text-md  text-black">
                                     <option value="">Semua Desa</option>
                                     @foreach ($desas as $desa)
                                         <option value="{{ $desa->id }}">{{ $desa->nama }}</option>
@@ -46,7 +46,7 @@
                                 </select>
 
                                 <!-- Filter Jenis -->
-                                <select x-model="selectedJenis" @change="filterData()" class="px-2 py-1 pr-10 border rounded-md text-sm text-black">
+                                <select x-model="selectedJenis" @change="filterData()" class="px-2 w-3/6 text-xs py-1 pr-10 border rounded-md md:text-md text-black">
                                     <option value="">Semua Jenis</option>
                                     @foreach ($kategories as $kategori)
                                         <option value="{{ $kategori->id }}">{{ $kategori->jenis }}</option>
