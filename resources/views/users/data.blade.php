@@ -62,8 +62,8 @@
                                                     <td class="px-6 py-4 text-sm text-gray-500 max-w-xs">
                                                         <div x-data="{ expanded: false }" class="w-full">
                                                                 <div>
-                                                                    <div x-bind:class="expanded ? 'whitespace-normal' : 'truncate w-52'"
-                                                                        x-text="expanded ? item.deskripsi : (item.deskripsi.length > 50 ? item.deskripsi.substring(0, 50) + '...' : item.deskripsi)">
+                                                                    <div x-bind:class="expanded ? 'whitespace-normal text-left' : 'truncate w-52'"
+                                                                        x-text="expanded ? item.deskripsi : (item.deskripsi.length > 50 ? item.deskripsi.substring(0, 50) + '...' : item.deskripsi)" style="text-align: justify;">
                                                                     </div>
                                                                     <span x-show="item.deskripsi.length > 50 && !expanded"
                                                                         @click="expanded = !expanded"
